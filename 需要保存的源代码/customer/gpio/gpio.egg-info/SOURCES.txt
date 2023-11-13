@@ -1,0 +1,10 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+gpio/__init__.py
+gpio.egg-info/PKG-INFO
+gpio.egg-info/SOURCES.txt
+gpio.egg-info/dependency_links.txt
+gpio.egg-info/top_level.txt

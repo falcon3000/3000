@@ -1,0 +1,22 @@
+# How to Use
+
+This gpio-trace app can check value of DI_0(gpio421), Before execute this app, make 
+sure DI_0 was 0(no input connect to to DI_0).
+
+This app test on jp4.6, jp5.0.2 was not tested.
+
+- cpoy `select_notify.c` to IPC520A
+
+- build select_notify.c
+  gcc select_notify.c  -o gpio-trace
+
+- execute app
+  sudo ./gpio-trace
+
+- test if it can shutdown success.
+  1. Connect DI_0 with low
+  1. Check default value `sudo cat /sys/class/gpio/gpio421/value`, 
+		value should be 0 when input was low
+  1. Provide a high signal to DI_0. now IPC520A should be power off right now.
+
+To add more function when DI_0 was high, refer "call_shutdown()"  to add wanted function, like: save data, close app... 
